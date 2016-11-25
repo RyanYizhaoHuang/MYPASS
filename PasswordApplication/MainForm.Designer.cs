@@ -76,7 +76,7 @@
             this.CategoryFlowLayoutPanel1.Controls.Add(this.CategoryTreeView);
             this.CategoryFlowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.CategoryFlowLayoutPanel1.Location = new System.Drawing.Point(0, 26);
-			this.CategoryFlowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.CategoryFlowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.CategoryFlowLayoutPanel1.Name = "CategoryFlowLayoutPanel1";
             this.CategoryFlowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.CategoryFlowLayoutPanel1.Size = new System.Drawing.Size(196, 440);
@@ -406,6 +406,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Password App";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.CategoryFlowLayoutPanel1.ResumeLayout(false);
             this.InteractCategoryPanel.ResumeLayout(false);

@@ -327,5 +327,10 @@ namespace PasswordApplication
 
             }
         }
+        //When the form close, clean up application
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
