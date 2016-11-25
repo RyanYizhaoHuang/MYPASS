@@ -20,7 +20,7 @@ namespace PasswordApplication.Controller
         // Two deleteUserRecord and deleteUserCategory helper class, used to call the helper class to do db stuff(ie. delete,save,insert).
         IDelete deleteHelper;
 
-        //Construction
+        //Constructor
         public DeleteRecordController(Form _view, AbDatabaseEntity _entity)
         {
             this.view = _view;
@@ -43,10 +43,10 @@ namespace PasswordApplication.Controller
                 //Call DeleteUserCategory and DeleteUserRecord hepler classes
                 //Get the RecordId from the click row and send it as the delete record parameter
                 //Remove the dependancy from userRecordCategory table first                  
-                DeleteUserCategoryhelper deleteUserCategory = new DeleteUserCategoryhelper();
-                isRecordCategoryDeleted = deleteUserCategory.DeleteEntity(((UserRecord)entity));  // Cast entity to UserRecord 
-                DeleteUserRecordhelper deleteUserRecord = new DeleteUserRecordhelper();
-                isRecordDeleted = deleteUserRecord.DeleteEntity(((UserRecord)entity));  // Cast entity to UserRecord
+                deleteHelper = new DeleteUserCategoryhelper();
+                isRecordCategoryDeleted = deleteHelper.DeleteEntity(((UserRecord)entity));  // Cast entity to UserRecord 
+                deleteHelper = new DeleteUserRecordhelper();
+                isRecordDeleted = deleteHelper.DeleteEntity(((UserRecord)entity));  // Cast entity to UserRecord
                 if (isRecordDeleted && isRecordCategoryDeleted)
                 {
                     MessageBox.Show("The record has been deleted.");
